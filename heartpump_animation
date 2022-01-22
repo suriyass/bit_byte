@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style>
+        body{
+            background-color:#000000;
+        }
+        h1{
+            color:#ffffff;
+        }
+        .heart{
+            position:relative;
+            left:35px;
+            top:5px;
+            height:50px;
+            width:50px;
+            background-color:#ff0000;
+            transform:rotate(45deg);
+            animation:heartpump 1.5s infinite;
+        }
+        .heart::before,
+        .heart::after{
+            position: absolute;
+            height:50px;
+            width:50px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            content:"";
+        }
+        .heart::before{
+            left:0;
+            top:-25px;
+        }
+        .heart::after{
+            left:-25px;
+            top:0;
+        }
+        @keyframes heartpump{
+            0%{
+                transform:rotate(45deg) scale(0.8);
+            }
+            5%{
+                transform:rotate(45deg) scale(0.9);
+            }
+            10%{
+                transform:rotate(45deg) scale(0.8);
+            }
+            15%{
+                transform:rotate(45deg) scale(1);
+            }
+            50%{
+                transform:rotate(45deg) scale(0.9)
+            }
+            100%{
+                transform:rotate(45deg) scale(1);
+            }
+        }
+     
+    </style>
+    <title>
+        BB Code
+    </title>
+</head>
+<body>
+    <h1>Heart Icon</h1>
+    <div class="heart">
+    </div>
+</body>
+</html>         
