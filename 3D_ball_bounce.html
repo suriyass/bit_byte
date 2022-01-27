@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style>
+        body{
+            background-color: #000000;
+        }
+        h1{
+            color:#ffffff;
+        }
+        .ball{
+            height:100px;
+            width:100px;
+            background-color: blue;
+            border-radius:50%;
+            position: relative;
+            left:15px;
+            display: block;
+            background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
+            animation: bounce 0.5s;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.5s,0.05s,1s,0.5s);
+            animation-iteration-count: infinite;
+        }
+        .ball:before {
+            content: "";
+            position: absolute;
+            top:1px;
+            left:5px;
+            width:90px;
+            height:90px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 50% 0px, rgb(232, 238, 238) ,rgba(255,255,255,0)55%);
+            
+             
+}
+@keyframes bounce {
+    from{
+        transform: translate3d(0,0,0);
+    }
+    to{
+        transform: translate3d(0,25px,0);
+    }
+    
+    
+}
+.floor{
+    height: 12px;
+    width:100px;
+    background-color:rgb(141, 42, 42);
+    position: relative;
+    left:15px;
+    top:25px;
+    background: radial-gradient(rgb(141,42,42) , #000000 100%);
+}
+    </style>
+    <title>
+        BB Code
+    </title>
+</head>
+<body>
+    <h1>3D Ball</h1>
+    <div class="ball">
+    </div>
+    <div class="floor"></div>
+</body>
+</html>         
